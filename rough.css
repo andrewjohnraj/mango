@@ -1,0 +1,205 @@
+.rows{
+    display: grid;
+    box-sizing: border-box;
+    /*grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));*/
+    row-gap: 15px;
+    column-gap: 15px;
+    grid-template-columns: auto auto auto auto;
+    justify-content:space-between;
+    justify-content: space-around;
+    
+  }
+  .row{
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border: 1px solid pink;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  
+  img{
+    height: 190px;
+  
+    width: 190px;
+    border-radius: 50%;
+    border: 3px solid rgb(186, 94, 109);
+  
+  }
+    img:hover{
+    transition: 0.5s;
+    width: 260px;
+    height: 280px;
+  }
+    .row{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px; 
+    text-align: center;
+  }
+  .row:nth-child(1){
+  background-color: hsla(177, 71%, 57%, 0.1);
+  
+  }
+  .row:nth-child(1) .badge p{
+    color: rgb(119, 119, 204);
+  }
+  .row:nth-child(2){
+    background-color: hsla(39, 100%, 56%,0.1);
+    }
+  .row:nth-child(2) .badge p{
+        color:rgb(201, 125, 125);
+  }
+  .row:nth-child(3){
+    background-color:  hsla(90, 100%, 3%,0.1);
+  }
+  .row:nth-child(3) .badge p{
+    color: teal;
+  }
+  .row:nth-child(4){
+    background-color:  hsla(234, 85%, 45%,0.1);
+  }
+  .row:nth-child(4) .badge p{
+    color: rgb(126, 126, 208);
+  }
+  .row:nth-child(5){
+    background-color: hsla(100, 0%, 67%,0.1);
+    }
+    .row:nth-child(5) .badge p{
+      color:rgb(201, 125, 125);
+    }
+    
+    .row:nth-child(6){
+      background-color: hsla(2, 55%, 50%, 0.1);
+      }
+    .row:nth-child(6) .badge p{
+          color:purple;
+    }
+    .row:nth-child(7){
+      background-color:  hsla(166, 92%, 41%, 0.1);
+    }
+    .row:nth-child(7) .badge p{
+      color: green;
+    }
+    .row:nth-child(8){
+      background-color:  hsla(3, 68%, 30%, 0.1);
+    }
+    .row:nth-child(8) .badge p{
+      color: palevioletred;
+    }
+    /*
+    .img:hover:nth-child(1){
+        transition: 1s;
+        width: 250px;
+        height: 250px; 
+    }
+    .img:nth-child(2){
+        transition: 1s;
+        width: 250px;
+        height: 250px;
+    }
+    .img:nth-child(3){
+        transition: 1s;
+        width: 250px;
+        height: 250px;
+    }
+    .img:nth-child(4){
+        transition: 1s;
+        width: 250px;
+        height: 250px;
+    }
+    .img:nth-child(5){
+        transition: 1s;
+        width: 250px;
+        height: 250px;
+    }
+    .img:nth-child(6){
+        transition: 1s;
+         width: 250px;
+         height: 250px;
+    }
+    .img:nth-child(7){
+        transition: 1s;
+         width: 250px;
+        height: 250px;
+    }
+    .img:nth-child(8){
+        transition: 1s;
+         width: 250px;
+        height: 250px;
+    }*/
+    .button a {
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      font-size: 11px;
+      color: #111;
+      text-decoration: none;
+      padding: 10px 15px;
+      border: 1px solid pink;
+      font-weight: bold;
+     }
+    
+    .button a:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 0%;
+      background: #e6b5b5;
+      height: 100%;
+      z-index: -1;
+      transition: width 0.3s ease-in-out;
+      transform: skew(-25deg);
+      transform-origin: right;
+    }
+    .button a:hover:after {
+        width: 150%;
+        left: -10px;
+        transform-origin: left;
+        
+      }
+    .button a:hover {
+      color: #fff;
+      transition: all 0.5s ease;
+    }
+     .button a:nth-of-type(1) {
+      border-radius: 50px 0 0 50px;
+    }
+    
+    .button a:nth-of-type(2) {
+      border-radius: 0px 50px 50px 0;
+    }
+    @media screen and (min-width:300px) and (max-width:500px){
+      .rows{ 
+        grid-template-columns: auto;
+  
+      }
+    }
+    @media screen and (min-width:500px) and (max-width:800px){
+      .rows{
+        grid-template-columns: auto auto;
+      }
+      
+    }
+    @media screen and (min-width:800px) and (max-width:1200px){
+      .rows{
+        grid-template-columns:auto auto auto;
+      }
+    }
+    /*
+  .row.badge{
+    
+    transform: rotateX('30deg') scale(0.7);
+    transition: 05s all ease;
+    }
+  .row.badge:hover{
+      cursor: pointer;
+      transform: rotate(0deg) scale(1);
+    }*/
